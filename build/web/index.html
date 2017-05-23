@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+       
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+            <!-- Mobile support -->
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="description" content="ne cherchez plus, trouvez" />
+            <meta name="keywords" content="pharmacie,pharmacie de garde, centre sanitaire, hopitaux" />
+            <meta name="author" content="Mapps-UCAO" />
+
+            <!-- Twitter Bootstrap -->
+            <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+            <!-- Material Design for Bootstrap -->
+            <link rel="stylesheet" href="${context}/css/style/pageStyle.css" />
+           <link rel="stylesheet" href="${context}/css/style/customPageStyle.css" />
+              <link href="//cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css" rel="stylesheet">
+            <title> </title>
+    </head>
+    <body>
+         <script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+   
+    <div class="header-panel shadow-z-2 success">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-3">
+                    <h1>PharmaService</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid main">
+        <div class="row">
+            <nav class="col-xs-3 menu">
+                <ul>
+                    <li class="active withripple text-uppercase text-success" data-target="#about">Les pharmacies de garde</li>
+                    <li class="withripple" data-target="#getting-started"><a href="google.fr">Pharmacie de la paix</a></li>
+                    <li class="withripple" data-target="#material-colors">Pharmacie de Gbossime</li>
+                    <li class="withripple" data-target="#checkbox">Pharmacie Satis</li>
+                    <li class="withripple" data-target="#radio-button">Pharmacie Yem-bla</li>
+                    <li class="withripple" data-target="#toggle-button">Pharmacie du Centre</li>
+                </ul>
+            </nav>
+            <div class="pages col-xs-9">
+                <div class="col-xs-12">
+                    <div class="well page active" id="about">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input class="form-control floating-label" value="" id="keyword" type="text" placeholder="Que cherchez vous ?">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-flat btn-primary" name="submit" type="submit"><i class="mdi-action-search"></i></button>
+                                </span>
+                            </div>
+                            <div id="results" ></div>
+                        </div>
+                    </div>
+                    <div class="well-sm page active" style="margin-top: 0px;height: 479px">
+                        <style>
+                            .ui-button {
+                                background:#3887BE;
+                                color:#FFF;
+                                display:block;
+                                position:absolute;
+                                top:50%;left:50%;
+                                width:160px;
+                                margin:-20px 0 0 -80px;
+                                z-index:100;
+                                text-align:center;
+                                padding:10px;
+                                border:1px solid rgba(0,0,0,0.4);
+                                border-radius:3px;
+                            }
+                            .ui-button:hover {
+                                background:#3074a4;
+                                color:#fff;
+                            }
+                        </style>
+
+                        <div id='map'></div>
+                        <a href='#' id='geolocate' class='ui-button'>Trouvez moi</a>
+
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    </body>
+</html>
